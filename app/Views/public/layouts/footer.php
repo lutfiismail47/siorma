@@ -140,3 +140,38 @@
     <p>Copyright &copy; 2026 SIORMA STTC. All rights reserved.</p>
   </div>
 </footer>
+
+<script>
+  // 1. Memblokir fungsi Klik Kanan (Context Menu)
+  document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+  });
+
+  // 2. Memblokir kombinasi tombol Inspect Element & Shortcut salin
+  document.addEventListener('keydown', function(e) {
+    // Blokir F12
+    if (e.key === "F12") {
+      e.preventDefault();
+    }
+
+    // Blokir Ctrl+Shift+I (Inspect) dan Ctrl+Shift+J (Console)
+    if (e.ctrlKey && e.shiftKey && (e.key === 'I' || e.key === 'J' || e.key === 'i' || e.key === 'j')) {
+      e.preventDefault();
+    }
+
+    // Blokir Ctrl+U (View Source kode mentah HTML)
+    if (e.ctrlKey && (e.key === 'U' || e.key === 'u')) {
+      e.preventDefault();
+    }
+
+    // Blokir Ctrl+S (Menyimpan halaman/gambar secara instan)
+    if (e.ctrlKey && (e.key === 'S' || e.key === 's')) {
+      e.preventDefault();
+    }
+  });
+
+  // Cegah gambar di-drag
+  document.querySelectorAll("img").forEach(function(img) {
+    img.draggable = false;
+  });
+</script>

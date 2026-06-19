@@ -19,6 +19,10 @@
 body {
   background-color: var(--light-bg);
   color: #000000;
+  /* Mencegah teks di seluruh website untuk diblok/diseleksi */
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 dan yang lebih baru */
+  user-select: none; /* Standar standar browser modern */
 }
 
 .container {

@@ -1,0 +1,10 @@
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteRule ^(app|system|vendor|writable|tests) - [F,L]
+    
+    <FilesMatch "^\.">
+        Require all denied
+    </FilesMatch>
+    
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
