@@ -13,6 +13,51 @@
       </a>
     </div>
   </section>
+
+  <section class="manfaat-section">
+    <div class="manfaat-container">
+      <h2 class="manfaat-title">Manfaat Menggunakan SIORMA</h2>
+      <div class="manfaat-grid">
+
+        <div class="manfaat-card">
+          <div class="manfaat-icon-wrapper">
+            <i class="fas fa-cubes"></i>
+          </div>
+          <div class="manfaat-content">
+            <h3 class="manfaat-card-title">Sentralisasi Informasi</h3>
+            <p class="manfaat-card-desc">
+              SIORMA menjadi platform terpusat untuk seluruh informasi ormawa di STTC, mengatasi masalah tidak adanya wadah resmi yang terintegrasi sebelumnya.
+            </p>
+          </div>
+        </div>
+
+        <div class="manfaat-card">
+          <div class="manfaat-icon-wrapper">
+            <i class="fas fa-search"></i>
+          </div>
+          <div class="manfaat-content">
+            <h3 class="manfaat-card-title">Kemudahan Akses Informasi</h3>
+            <p class="manfaat-card-desc">
+              Mahasiswa dapat mengakses informasi ormawa secara lengkap dalam satu tempat, meliputi profil, visi-misi, struktur kepengurusan, kegiatan, dan program kerja — tanpa perlu mencari ke berbagai sumber yang terpisah.
+            </p>
+          </div>
+        </div>
+
+        <div class="manfaat-card">
+          <div class="manfaat-icon-wrapper">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <div class="manfaat-content">
+            <h3 class="manfaat-card-title">Keamanan Terstruktur</h3>
+            <p class="manfaat-card-desc">
+              Akses pengelolaan data dilindungi sistem autentikasi, memastikan hanya pihak berwenang yang dapat mengubah informasi.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
 <?php endif; ?>
 
 <main class="content-section">
@@ -46,7 +91,8 @@
               </div>
             </div>
 
-          </a> <?php endforeach; ?>
+          </a>
+        <?php endforeach; ?>
       </div>
     <?php else: ?>
       <div style="text-align: center; padding: 60px 0; color: var(--text-muted);">
