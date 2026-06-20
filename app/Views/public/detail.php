@@ -138,6 +138,28 @@
     height: 100%;
     object-fit: cover;
   }
+
+  @media (max-width: 768px) {
+
+    /* --- TAMBAHKAN DUA ATURAN BARU INI DI DALAM MEDIA QUERY YANG SUDAH ADA --- */
+
+    /* 1. Reset grid agar tidak mengunci ukuran minimal 320px di HP */
+    .gallery-masonry {
+      grid-template-columns: 1fr !important;
+      /* Dipaksa menjadi 1 kolom penuh */
+      gap: 12px !important;
+      /* Memperkecil jarak antar gambar agar proporsional */
+      width: 100% !important;
+    }
+
+    /* 2. Pastikan kontainer pembungkus gambar tidak meluap */
+    .gallery-item {
+      width: 100% !important;
+      max-width: 100% !important;
+      height: 200px !important;
+      /* Sedikit memperkecil tinggi gambar di HP agar estetik */
+    }
+  }
 </style>
 
 <div class="detail-banner"></div>

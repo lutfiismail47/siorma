@@ -20,6 +20,7 @@
   font-family: "Inter", sans-serif;
 }
 
+html,
 body {
   background-color: var(--light-bg);
   color: #000000;
@@ -30,6 +31,10 @@ body {
   /* IE 10 dan yang lebih baru */
   user-select: none;
   /* Standar standar browser modern */
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  position: relative;
 }
 
 .container {
