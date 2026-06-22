@@ -1,69 +1,45 @@
-# CodeIgniter 4 Application Starter
+# SIORMA (Sistem Informasi Organisasi Mahasiswa STTC)
 
-## What is CodeIgniter?
+SIORMA adalah platform berbasis web terintegrasi yang dirancang sebagai pusat informasi resmi bagi seluruh organisasi mahasiswa (Ormawa) di Sekolah Tinggi Teknologi Cipasung (STTC). Aplikasi ini bertujuan untuk mengatasi masalah fragmentasi informasi dengan menyatukan direktori, visi-misi, struktur kepengurusan, serta pelaporan dokumentasi kegiatan dalam satu wadah yang terpusat, aman, dan mudah diakses oleh publik.
 
-CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
-More information can be found at the [official site](https://codeigniter.com).
+## 🚀 Fitur Utama
 
-This repository holds a composer-installable app starter.
-It has been built from the
-[development repository](https://github.com/codeigniter4/CodeIgniter4).
+- **Sentralisasi Informasi Ormawa**: Direktori terpusat untuk profil, visi-misi, struktur organisasi, dan program kerja seluruh Ormawa STTC.
+- **Aksesibilitas Publik**: Pencarian dan penyaringan kategori ormawa yang mudah tanpa mengharuskan pengguna umum melakukan login.
+- **Manajemen Data Terstruktur**: Dasbor admin khusus bagi pengurus ormawa untuk memperbarui data dan dokumentasi kegiatan secara real-time.
+- **Keamanan Terautentikasi**: Sistem pembatasan hak akses yang memastikan manipulasi data hanya dapat dilakukan oleh pihak yang berwenang.
 
-More information about the plans for version 4 can be found in [CodeIgniter 4](https://forum.codeigniter.com/forumdisplay.php?fid=28) on the forums.
+## 🛠️ Teknologi yang Digunakan
 
-You can read the [user guide](https://codeigniter.com/user_guide/)
-corresponding to the latest version of the framework.
+- **Backend / Web Framework**: CodeIgniter 4 (PHP Full-Stack Framework)
+- **Frontend / Desain**: HTML5 & Vanilla CSS (Kustom Tanpa Framework CSS)
+- **Database**: MySQL / MariaDB
+- **Ikon & Tipografi**: FontAwesome Icons & Google Fonts (Inter)
 
-## Installation & updates
+## 💻 Persyaratan Sistem
 
-`composer create-project codeigniter4/appstarter` then `composer update` whenever
-there is a new release of the framework.
+Untuk menjalankan aplikasi ini secara lokal, pastikan perangkat Anda memenuhi syarat berikut:
+- PHP versi 8.2 atau yang lebih baru
+- Ekstensi PHP diaktifkan: `intl`, `mbstring`, `json`, `mysqlnd`
+- Web Server (XAMPP / Apache lokal)
 
-When updating, check the release notes to see if there are any changes you might need to apply
-to your `app` folder. The affected files can be copied or merged from
-`vendor/codeigniter4/framework/app`.
+## 🔧 Cara Instalasi di Lokal (Development)
 
-## Setup
+1. **Clone Repositori**
+```bash
+   git clone https://github.com/lutfiismail47/siorma.git
+```
 
-Copy `env` to `.env` and tailor for your app, specifically the baseURL
-and any database settings.
+2. **Konfigurasi Environment**
+- Salin file `env` menjadi `.env`.
+- Ubah `CI_ENVIRONMENT` menjadi `development`.
+- Sesuaikan konfigurasi `database.default.hostname`, `database.default.database`, `database.default.username`, dan `database.default.password`.
 
-## Important Change with index.php
+3. **Impor Database**
+- Buat database baru bernama siorma di phpMyAdmin.
+- Impor file SQL proyek (jika ada di dalam folder) ke database tersebut.
 
-`index.php` is no longer in the root of the project! It has been moved inside the *public* folder,
-for better security and separation of components.
+4. **Jalankan Aplikasi**
+Arahkan web server lokal (Apache) Anda ke folder `public/` di dalam proyek ini, atau jalankan perintah bawaan jika diperlukan.
 
-This means that you should configure your web server to "point" to your project's *public* folder, and
-not to the project root. A better practice would be to configure a virtual host to point there. A poor practice would be to point your web server to the project root and expect to enter *public/...*, as the rest of your logic and the
-framework are exposed.
-
-**Please** read the user guide for a better explanation of how CI4 works!
-
-## Repository Management
-
-We use GitHub issues, in our main repository, to track **BUGS** and to track approved **DEVELOPMENT** work packages.
-We use our [forum](http://forum.codeigniter.com) to provide SUPPORT and to discuss
-FEATURE REQUESTS.
-
-This repository is a "distribution" one, built by our release preparation script.
-Problems with it can be raised on our forum, or as issues in the main repository.
-
-## Server Requirements
-
-PHP version 8.2 or higher is required, with the following extensions installed:
-
-- [intl](http://php.net/manual/en/intl.requirements.php)
-- [mbstring](http://php.net/manual/en/mbstring.installation.php)
-
-> [!WARNING]
-> - The end of life date for PHP 7.4 was November 28, 2022.
-> - The end of life date for PHP 8.0 was November 26, 2023.
-> - The end of life date for PHP 8.1 was December 31, 2025.
-> - If you are still using below PHP 8.2, you should upgrade immediately.
-> - The end of life date for PHP 8.2 will be December 31, 2026.
-
-Additionally, make sure that the following extensions are enabled in your PHP:
-
-- json (enabled by default - don't turn it off)
-- [mysqlnd](http://php.net/manual/en/mysqlnd.install.php) if you plan to use MySQL
-- [libcurl](http://php.net/manual/en/curl.requirements.php) if you plan to use the HTTP\CURLRequest library
+*Proyek ini dikembangkan sebagai bagian dari tugas akademis Sekolah Tinggi Teknologi Cipasung (STTC).*

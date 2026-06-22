@@ -63,8 +63,8 @@
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 14px;
     /* Jarak vertikal yang rapi antar baris medsos */
+    gap: 14px;
   }
 
   .footer-social-item a {
@@ -80,8 +80,8 @@
   /* Efek Animasi Hover Interaktif Hijau Khas STTC */
   .footer-social-item a:hover {
     color: #2e7d32;
-    transform: translateX(6px);
     /* Geser ke kanan dengan mulus saat didekati kursor */
+    transform: translateX(6px);
   }
 
   /* Baris Hak Cipta Bawah */

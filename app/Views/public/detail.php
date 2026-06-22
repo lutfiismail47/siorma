@@ -17,8 +17,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(27, 77, 34, 0.7);
     /* Overlay hijau transparan serasi banner */
+    background-color: rgba(27, 77, 34, 0.7);
   }
 
   .profile-overlap-container {
@@ -26,17 +26,17 @@
     display: flex;
     align-items: flex-end;
     gap: 25px;
-    margin-top: -60px;
     /* Menjaga logo memotong spanduk tepat di tengah */
+    margin-top: -60px;
     z-index: 5;
-    margin-bottom: 50px;
     /* Memberi jarak aman ke teks deskripsi di bawah */
+    margin-bottom: 50px;
   }
 
   .title-meta {
     position: relative;
-    height: 70px;
     /* Mengunci tinggi ruang teks setinggi sisa potongan logo bawah */
+    height: 70px;
     display: flex;
     flex-direction: column;
   }
@@ -49,12 +49,12 @@
     margin: 0;
     line-height: 1;
     position: absolute;
-    bottom: 74px;
     /* Mendorong nama naik tepat bersandar di atas garis perbatasan */
+    bottom: 74px;
     left: 0;
     white-space: nowrap;
-    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
     /* Dimensi halus agar teks putih terbaca tajam */
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
   }
 
   .title-meta p {
@@ -63,8 +63,8 @@
     font-weight: bold;
     margin: 0;
     position: absolute;
-    top: 6px;
     /* Menurunkan kategori tepat berada di bawah garis perbatasan */
+    top: 6px;
     left: 0;
   }
 
@@ -145,10 +145,10 @@
 
     /* 1. Reset grid agar tidak mengunci ukuran minimal 320px di HP */
     .gallery-masonry {
-      grid-template-columns: 1fr !important;
       /* Dipaksa menjadi 1 kolom penuh */
-      gap: 12px !important;
+      grid-template-columns: 1fr !important;
       /* Memperkecil jarak antar gambar agar proporsional */
+      gap: 12px !important;
       width: 100% !important;
     }
 
@@ -156,8 +156,8 @@
     .gallery-item {
       width: 100% !important;
       max-width: 100% !important;
-      height: 200px !important;
       /* Sedikit memperkecil tinggi gambar di HP agar estetik */
+      height: 200px !important;
     }
   }
 </style>
