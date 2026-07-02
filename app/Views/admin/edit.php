@@ -51,6 +51,16 @@
           </div>
 
           <div class="admin-form-group">
+            <label for="no_whatsapp">Nomor WhatsApp Pengurus</label>
+            <input type="text" name="no_whatsapp" id="no_whatsapp" class="admin-form-control"
+              placeholder="Contoh: 628123456789 (Awali dengan kode negara 62)"
+              value="<?= isset($ormawa['no_whatsapp']) ? esc($ormawa['no_whatsapp']) : '' ?>">
+            <small style="color: #666; font-size: 0.8rem; display: block; margin-top: 5px;">
+              *Penting: Gunakan format angka penuh diawali 62 (tanpa spasi/tanda strip) agar tombol integrasi WhatsApp bekerja.
+            </small>
+          </div>
+
+          <div class="admin-form-group">
             <label>Deskripsi</label>
             <textarea name="deskripsi" rows="5" class="admin-form-control" required><?= esc($ormawa['deskripsi']) ?></textarea>
           </div>
@@ -89,7 +99,7 @@
               <?php endfor; ?>
             </div>
             <label class="btn-link-upload" style="display: inline-block; cursor: pointer; color: #0066cc; text-decoration: underline; font-weight: bold;">
-              Unggah documentation baru
+              Unggah dokumentasi baru
               <input type="file" id="inputDocsCicilEdit" accept="image/*" style="display: none;">
             </label>
             <div id="hiddenInputsContainerEdit"></div>

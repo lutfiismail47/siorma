@@ -12,7 +12,7 @@ class OrmawaModel extends Model
     protected $returnType       = 'array';
     protected $useSoftDeletes   = false;
     protected $protectFields    = true;
-    protected $allowedFields    = ['nama', 'logo', 'deskripsi', 'visi', 'misi', 'program_kerja', 'struktur_kepengurusan', 'id_kategori'];
+    protected $allowedFields    = ['nama', 'logo', 'deskripsi', 'visi', 'misi', 'program_kerja', 'struktur_kepengurusan', 'id_kategori', 'no_whatsapp'];
 
     protected bool $allowEmptyInserts = false;
     protected bool $updateOnlyChanged = true;

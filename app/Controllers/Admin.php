@@ -51,6 +51,10 @@ class Admin extends BaseController
     $this->ormawaModel->insert([
       'nama' => $this->request->getPost('nama'),
       'id_kategori' => $this->request->getPost('id_kategori'),
+
+      // === PENYESUAIAN 1: MENAMPUNG INPUT NO WHATSAPP BARU ===
+      'no_whatsapp' => $this->request->getPost('no_whatsapp'),
+
       'deskripsi' => $this->request->getPost('deskripsi'),
       'visi' => $this->request->getPost('visi'),
       'misi' => $this->request->getPost('misi'),
@@ -108,6 +112,10 @@ class Admin extends BaseController
     $this->ormawaModel->update($id, [
       'nama' => $this->request->getPost('nama'),
       'id_kategori' => $this->request->getPost('id_kategori'),
+
+      // === PENYESUAIAN 2: MENAMPUNG UPDATE NO WHATSAPP BARU ===
+      'no_whatsapp' => $this->request->getPost('no_whatsapp'),
+
       'deskripsi' => $this->request->getPost('deskripsi'),
       'visi' => $this->request->getPost('visi'),
       'misi' => $this->request->getPost('misi'),

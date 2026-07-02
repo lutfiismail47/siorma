@@ -160,6 +160,84 @@
       height: 200px !important;
     }
   }
+
+  /* --- TOMBOL WHATSAPP MELAYANG POJOK KANAN BAWAH --- */
+  .floating-whatsapp-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    /* Warna hijau resmi WhatsApp */
+    color: #ffffff !important;
+    padding: 14px 24px;
+    font-size: 0.95rem;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 50px;
+    /* Membuat tombol berbentuk elips membulat sempurna */
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+    z-index: 9999;
+    /* Memastikan tombol mengapung di lapisan paling atas */
+    transition: transform 0.2s ease, background-color 0.2s ease;
+  }
+
+  .floating-whatsapp-btn i {
+    font-size: 1.3rem;
+  }
+
+  /* Efek sedikit membesar saat disorot kursor (hover) */
+  .floating-whatsapp-btn:hover {
+    background-color: #128c7e;
+    /* Hijau WhatsApp tua */
+    transform: scale(1.05);
+  }
+
+  /* Responsif: Sedikit menggeser posisi di layar HP agar tidak tertutup bar navigasi bawah bawaan HP */
+  @media (max-width: 768px) {
+    .floating-whatsapp-btn {
+      bottom: 20px;
+      right: 20px;
+      padding: 12px 18px;
+      font-size: 0.85rem;
+    }
+  }
+
+  /* Responsif: Mengubah tombol menjadi bulat ikon saja saat dibuka di HP */
+  /* Perbaikan posisi ikon di layar HP */
+  /* Perbaikan Total Posisi Ikon di HP */
+  @media (max-width: 768px) {
+    .floating-whatsapp-btn {
+      bottom: 20px;
+      right: 20px;
+
+      /* Membuat kotak lingkaran sempurna */
+      width: 50px;
+      height: 50px;
+      padding: 0 !important;
+      border-radius: 50% !important;
+
+      /* Gunakan flexbox murni untuk mengunci posisi di tengah */
+      display: flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+    }
+
+    /* 1. Lenyapkan teks "Hubungi Ormawa" sepenuhnya dari kalkulasi layout HP */
+    .floating-whatsapp-btn span {
+      display: none !important;
+    }
+
+    /* 2. Pastikan ukuran ikon pas dan tidak membawa margin bawaan desktop */
+    .floating-whatsapp-btn i {
+      font-size: 1.6rem !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      line-height: 1 !important;
+    }
+  }
 </style>
 
 <div class="detail-banner"></div>
@@ -206,5 +284,15 @@
 
   </article>
 </div>
+
+<?php if (!empty($ormawa['no_whatsapp'])): ?>
+  <a href="https://wa.me/<?= esc($ormawa['no_whatsapp']) ?>?text=Halo%20Pengurus%20<?= rawurlencode($ormawa['nama']) ?>.%20Saya%20ingin%20bertanya%20mengenai%20organisasi%20ini."
+    class="floating-whatsapp-btn"
+    target="_blank"
+    rel="noopener noreferrer"
+    title="Hubungi Ormawa">
+    <i class="fab fa-whatsapp"></i>
+    <span>Hubungi Ormawa</span> </a>
+<?php endif; ?>
 
 <?= view('public/layouts/footer') ?>
